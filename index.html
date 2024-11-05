@@ -1,0 +1,17 @@
+<html>
+  <script type="module">
+import { __wbg_set_wasm, greet, __wbg_alert_d3b6e8db27c82dfa } from "./pkg/wasm_game_of_life_bg.js";
+
+const wasm = await WebAssembly.instantiateStreaming(fetch("pkg/wasm_game_of_life_bg.wasm"), { 
+  "./wasm_game_of_life_bg.js": __wbg_alert_d3b6e8db27c82dfa
+})
+
+alert(0);
+
+__wbg_set_wasm(wasm);
+
+wasm.__wbindgen_start();
+
+  </script>
+  <button click="greet()">TEST</button>
+</html>
